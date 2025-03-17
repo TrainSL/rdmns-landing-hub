@@ -30,9 +30,11 @@ const AnimatedText = ({
           if (entry.isIntersecting) {
             setTimeout(() => {
               if (elementRef.current) {
+                // Add the animation class
                 elementRef.current.classList.add(`animate-${animation}`);
-                // Ensure text becomes visible by explicitly setting opacity to 1
+                // Make visible with transition
                 elementRef.current.style.opacity = '1';
+                elementRef.current.style.transition = 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out';
               }
             }, delay);
             
@@ -43,6 +45,7 @@ const AnimatedText = ({
             if (elementRef.current) {
               elementRef.current.classList.remove(`animate-${animation}`);
               elementRef.current.style.opacity = '0';
+              elementRef.current.style.transition = 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out';
             }
           }
         });
@@ -65,6 +68,10 @@ const AnimatedText = ({
     <Tag
       ref={elementRef as any}
       className={cn("opacity-0", className)}
+      style={{ 
+        transition: 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out',
+        willChange: 'opacity, transform'
+      }}
     >
       {text}
     </Tag>

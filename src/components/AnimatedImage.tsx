@@ -31,14 +31,22 @@ const AnimatedImage = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.add(`animate-${animation}`);
+              if (elementRef.current) {
+                elementRef.current.classList.add(`animate-${animation}`);
+                elementRef.current.style.opacity = '1';
+                elementRef.current.style.transition = 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out';
+              }
             }, delay);
             
             if (once) {
               observer.unobserve(entry.target);
             }
           } else if (!once) {
-            entry.target.classList.remove(`animate-${animation}`);
+            if (elementRef.current) {
+              elementRef.current.classList.remove(`animate-${animation}`);
+              elementRef.current.style.opacity = '0';
+              elementRef.current.style.transition = 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out';
+            }
           }
         });
       },
@@ -60,6 +68,10 @@ const AnimatedImage = ({
     <div
       ref={elementRef}
       className={cn("opacity-0", className)}
+      style={{ 
+        transition: 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out',
+        willChange: 'opacity, transform'
+      }}
     >
       <img 
         src={src} 

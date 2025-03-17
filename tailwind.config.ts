@@ -110,19 +110,19 @@ export default {
 				},
 				'pulse-soft': {
 					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.8' }
+					'50%': { opacity: '0.85' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out',
-				'fade-up': 'fade-up 0.5s ease-out',
-				'fade-down': 'fade-down 0.5s ease-out',
-				'fade-left': 'fade-left 0.5s ease-out',
-				'fade-right': 'fade-right 0.5s ease-out',
+				'fade-in': 'fade-in 0.8s ease-in-out',
+				'fade-up': 'fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+				'fade-down': 'fade-down 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+				'fade-left': 'fade-left 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+				'fade-right': 'fade-right 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse-soft': 'pulse-soft 3s ease-in-out infinite'
+				'pulse-soft': 'pulse-soft 4s ease-in-out infinite'
 			},
 			fontFamily: {
 				'sans': ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
