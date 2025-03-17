@@ -64,9 +64,11 @@ const Navbar = () => {
       
       {/* Mobile menu */}
       <div className={cn(
-        "md:hidden absolute w-full glass-effect shadow-md transition-transform duration-300 ease-in-out transform",
-        isMenuOpen ? "translate-y-0" : "-translate-y-full"
-      )}>
+        "md:hidden fixed inset-x-0 top-[var(--navbar-height)] glass-effect shadow-md transition-all duration-300 ease-in-out",
+        isMenuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
+      )}
+      style={{ '--navbar-height': scrolled ? '60px' : '76px' } as React.CSSProperties}
+      >
         <div className="px-4 pt-4 pb-6 space-y-4">
           <a 
             href="#features" 
