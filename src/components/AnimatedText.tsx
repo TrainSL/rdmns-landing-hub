@@ -29,14 +29,21 @@ const AnimatedText = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.add(`animate-${animation}`);
+              if (elementRef.current) {
+                elementRef.current.classList.add(`animate-${animation}`);
+                // Ensure text becomes visible by explicitly setting opacity to 1
+                elementRef.current.style.opacity = '1';
+              }
             }, delay);
             
             if (once) {
               observer.unobserve(entry.target);
             }
           } else if (!once) {
-            entry.target.classList.remove(`animate-${animation}`);
+            if (elementRef.current) {
+              elementRef.current.classList.remove(`animate-${animation}`);
+              elementRef.current.style.opacity = '0';
+            }
           }
         });
       },
