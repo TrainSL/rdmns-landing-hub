@@ -99,7 +99,7 @@ const Features = () => {
           {features.slice(0, 4).map((feature, index) => (
             <div 
               key={index}
-              className="opacity-0 animate-fade-up relative p-6 rounded-xl border border-rdmns-dark/5 bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="animate-fade-up relative p-6 rounded-xl border border-rdmns-dark/5 bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               style={{ animationDelay: `${feature.delay}ms` }}
             >
               <div className="p-3 mb-4 rounded-lg bg-rdmns-blue/5 inline-block">
@@ -112,7 +112,7 @@ const Features = () => {
         </div>
 
         {/* Additional features in cards */}
-        <div className="opacity-0 animate-fade-up" style={{ animationDelay: "900ms" }}>
+        <div className="animate-fade-up" style={{ animationDelay: "900ms" }}>
           <AnimatedText
             text="More Powerful Features"
             className="text-2xl font-bold mb-8 text-rdmns-dark"
@@ -123,7 +123,7 @@ const Features = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {features.slice(4).map((feature, index) => (
-              <Card key={index} className="opacity-0 animate-fade-up border-rdmns-dark/5 hover:shadow-md transition-all duration-300" style={{ animationDelay: `${1000 + index * 200}ms` }}>
+              <Card key={index} className="animate-fade-up border-rdmns-dark/5 hover:shadow-md transition-all duration-300" style={{ animationDelay: `${1000 + index * 200}ms` }}>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-rdmns-blue/5 inline-block">
@@ -141,7 +141,7 @@ const Features = () => {
         </div>
 
         {/* Feature details accordion */}
-        <div className="mt-16 opacity-0 animate-fade-up max-w-3xl mx-auto" style={{ animationDelay: "1200ms" }}>
+        <div className="mt-16 animate-fade-up max-w-3xl mx-auto" style={{ animationDelay: "1200ms" }}>
           <AnimatedText
             text="Detailed Feature Breakdown"
             className="text-2xl font-bold mb-8 text-rdmns-dark text-center"
