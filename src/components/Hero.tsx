@@ -35,7 +35,7 @@ const Hero = () => {
               tag="p"
             />
             
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start opacity-0 animate-fade-up" style={{ animationDelay: "800ms" }}>
+            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start animate-fade-up" style={{ animationDelay: "800ms" }}>
               <a 
                 href="#download" 
                 className="px-6 py-3 bg-rdmns-blue text-white rounded-full font-medium shadow-lg shadow-rdmns-blue/20 hover:shadow-xl hover:shadow-rdmns-blue/25 transition-all duration-300 transform hover:-translate-y-1"
@@ -64,7 +64,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-up" style={{ animationDelay: "1200ms" }}>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fade-up" style={{ animationDelay: "1200ms" }}>
           <a 
             href="#features" 
             className="flex flex-col items-center text-rdmns-dark/70 hover:text-rdmns-blue transition-colors"
