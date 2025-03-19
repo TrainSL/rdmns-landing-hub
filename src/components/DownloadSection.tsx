@@ -28,7 +28,7 @@ const DownloadSection = () => {
           />
           
           <AnimatedText
-            text="Experience the full power of our application on your iOS or Android device"
+            text="Experience the full power of our application on your iOS, Android or Huawei device"
             className="text-lg text-rdmns-gray max-w-2xl mx-auto text-pretty"
             animation="fade-up"
             delay={300}
@@ -36,7 +36,7 @@ const DownloadSection = () => {
           />
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           <a 
             href="https://apps.apple.com"
             target="_blank"
@@ -64,10 +64,24 @@ const DownloadSection = () => {
               <div className="text-lg font-semibold">Google Play</div>
             </div>
           </a>
+          
+          <a 
+            href="https://appgallery.huawei.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="animate-fade-up flex items-center justify-center gap-3 py-4 px-6 bg-[#00C6FF] text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+            style={{ animationDelay: "800ms" }}
+          >
+            <Download size={28} className="group-hover:scale-110 transition-transform" />
+            <div className="text-left">
+              <div className="text-xs font-medium">EXPLORE IT ON</div>
+              <div className="text-lg font-semibold">AppGallery</div>
+            </div>
+          </a>
         </div>
         
         <div className="mt-16 text-center">
-          <div className="animate-fade-up py-5 px-8 bg-white rounded-xl shadow-md inline-block border border-rdmns-dark/5" style={{ animationDelay: "800ms" }}>
+          <div className="animate-fade-up py-5 px-8 bg-white rounded-xl shadow-md inline-block border border-rdmns-dark/5" style={{ animationDelay: "1000ms" }}>
             <div className="flex items-center gap-2 text-sm text-rdmns-gray font-medium">
               <span className="flex h-3 w-3 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rdmns-blue opacity-75"></span>
@@ -75,23 +89,6 @@ const DownloadSection = () => {
               </span>
               <span>Join over 10,000+ happy users already using RDMNS.LK</span>
             </div>
-          </div>
-        </div>
-        
-        <div className="mt-12 max-w-md mx-auto animate-fade-up" style={{ animationDelay: "900ms" }}>
-          <div className="bg-white p-6 rounded-xl shadow-lg">
-            <h3 className="font-medium text-lg mb-4 text-rdmns-dark">Download Direct APK</h3>
-            <p className="text-rdmns-gray mb-4 text-sm">For advanced users, you can also download our app directly:</p>
-            <Button 
-              className="w-full bg-rdmns-blue hover:bg-rdmns-blue/90 flex items-center justify-center gap-2"
-              onClick={() => alert("APK Download would start here!")}
-            >
-              <Download size={18} />
-              Download APK File
-            </Button>
-            <p className="mt-3 text-xs text-rdmns-gray/70 text-center">
-              Version 1.2.3 • 15MB • Android 8.0+
-            </p>
           </div>
         </div>
       </div>

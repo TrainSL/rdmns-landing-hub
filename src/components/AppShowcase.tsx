@@ -81,7 +81,7 @@ const AppShowcase = () => {
         
         <div className="flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto">
           <div className="w-full md:w-2/5 order-2 md:order-1">
-            <div className="bg-white p-2 rounded-3xl shadow-lg relative overflow-hidden border border-rdmns-dark/5 aspect-[9/19] max-w-[240px] mx-auto">
+            <div className="bg-white p-2 rounded-3xl shadow-lg relative overflow-hidden border border-rdmns-dark/5 aspect-[9/19] max-w-[280px] mx-auto">
               <div className="absolute top-0 left-0 right-0 h-6 bg-rdmns-dark rounded-t-3xl"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-rdmns-dark rounded-b-3xl"></div>
               <div className="rounded-3xl overflow-hidden h-full pt-6">
