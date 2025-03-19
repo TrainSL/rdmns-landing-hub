@@ -50,9 +50,9 @@ const AppShowcase = () => {
   };
 
   return (
-    <section id="showcase" className="bg-rdmns-light py-24">
+    <section id="showcase" className="bg-rdmns-light py-20">
       <div className="section-container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-block mb-3 px-3 py-1 bg-rdmns-blue/10 rounded-full">
             <AnimatedText
               text="App Showcase"
@@ -79,12 +79,12 @@ const AppShowcase = () => {
           />
         </div>
         
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/2 order-2 md:order-1">
-            <div className="bg-white p-2 rounded-3xl shadow-xl relative overflow-hidden border border-rdmns-dark/5 aspect-[9/19]">
-              <div className="absolute top-0 left-0 right-0 h-8 bg-rdmns-dark rounded-t-3xl"></div>
+        <div className="flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto">
+          <div className="w-full md:w-2/5 order-2 md:order-1">
+            <div className="bg-white p-2 rounded-3xl shadow-lg relative overflow-hidden border border-rdmns-dark/5 aspect-[9/19] max-w-[240px] mx-auto">
+              <div className="absolute top-0 left-0 right-0 h-6 bg-rdmns-dark rounded-t-3xl"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-rdmns-dark rounded-b-3xl"></div>
-              <div className="rounded-3xl overflow-hidden h-full pt-8">
+              <div className="rounded-3xl overflow-hidden h-full pt-6">
                 <div className="relative h-full overflow-hidden bg-gradient-to-b from-rdmns-blue/5 to-purple-500/5">
                   {screens.map((screen, index) => (
                     <div 
@@ -109,20 +109,20 @@ const AppShowcase = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 order-1 md:order-2">
-            <div className="mb-8">
-              <div className="flex gap-2 mb-8">
+          <div className="w-full md:w-3/5 order-1 md:order-2">
+            <div className="mb-6">
+              <div className="flex gap-2 mb-6">
                 {screens.map((screen, index) => (
                   <button
                     key={index}
-                    className={`flex-1 py-3 px-4 rounded-lg transition-all ${
+                    className={`flex-1 py-2.5 px-3 rounded-lg transition-all ${
                       activeTab === index
                         ? "bg-rdmns-blue text-white shadow-md"
                         : "bg-white text-rdmns-dark border border-rdmns-dark/5 hover:bg-rdmns-blue/10"
                     }`}
                     onClick={() => handleTabClick(index)}
                   >
-                    <span className="font-medium">{screen.title}</span>
+                    <span className="font-medium text-sm md:text-base">{screen.title}</span>
                   </button>
                 ))}
               </div>
@@ -134,12 +134,12 @@ const AppShowcase = () => {
                     activeTab === index ? "opacity-100" : "opacity-0 hidden"
                   }`}
                 >
-                  <h3 className="text-2xl font-bold mb-3 text-rdmns-dark">{screen.title}</h3>
-                  <p className="text-lg text-rdmns-gray mb-6">{screen.description}</p>
+                  <h3 className="text-xl font-bold mb-2 text-rdmns-dark">{screen.title}</h3>
+                  <p className="text-base text-rdmns-gray mb-4">{screen.description}</p>
                 </div>
               ))}
               
-              <div className="w-full bg-gray-200 rounded-full h-1.5 mb-8">
+              <div className="w-full bg-gray-200 rounded-full h-1.5 mb-6">
                 <div
                   className="bg-rdmns-blue h-1.5 rounded-full transition-all duration-300"
                   style={{ width: `${((activeTab + 1) / screens.length) * 100}%` }}
