@@ -2,8 +2,11 @@
 import { ArrowDown } from "lucide-react";
 import AnimatedText from "./AnimatedText";
 import AnimatedImage from "./AnimatedImage";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-b from-white to-rdmns-light pt-16 overflow-hidden">
       <div className="section-container">
@@ -51,7 +54,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative">
+          <div className="relative mb-16 sm:mb-0">
             <div className="absolute -inset-4 bg-gradient-to-r from-rdmns-blue/5 to-purple-500/5 rounded-full blur-3xl opacity-50 animate-pulse-soft"></div>
             <AnimatedImage
               src="/placeholder.svg"
@@ -64,7 +67,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-fade-up" style={{ animationDelay: "1200ms" }}>
+        <div className={`absolute ${isMobile ? 'bottom-4' : 'bottom-8'} left-0 right-0 flex justify-center animate-fade-up`} style={{ animationDelay: "1200ms" }}>
           <a 
             href="#features" 
             className="flex flex-col items-center text-rdmns-dark/70 hover:text-rdmns-blue transition-colors"
