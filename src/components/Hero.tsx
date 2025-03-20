@@ -67,7 +67,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className={`absolute ${isMobile ? 'bottom-4' : 'bottom-8'} left-0 right-0 flex justify-center animate-fade-up`} style={{ animationDelay: "1200ms" }}>
+        <div className={`absolute ${isMobile ? 'bottom-4' : 'bottom-8'} left-1/2 transform -translate-x-1/2 animate-fade-up`} style={{ animationDelay: "1200ms" }}>
           <a 
             href="#features" 
             className="flex flex-col items-center text-rdmns-dark/70 hover:text-rdmns-blue transition-colors"
